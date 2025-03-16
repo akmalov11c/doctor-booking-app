@@ -14,12 +14,12 @@ _A full-stack web application that allows patients to book appointments with doc
 
 ## Features
 
-**User Management:** Patients and doctors have separate roles with authentication.  
-**Appointment Booking:** Patients can schedule and manage appointments.  
-**Doctor Panel:** Doctors can view their schedules and update appointment statuses.  
-**Admin Dashboard:** Admins can manage users, doctors, and appointments.  
-**Secure Authentication:** 🔐 JWT-based authentication for all users.  
-**Cloud Storage:** ☁️ Profile images and files are stored via Cloudinary.
+- **User Management:** Patients and doctors have separate roles with authentication.
+- **Appointment Booking:** Patients can schedule and manage appointments.
+- **Doctor Panel:** Doctors can view their schedules and update appointment statuses.
+- **Admin Dashboard:** Admins can manage users, doctors, and appointments.
+- **Secure Authentication:** 🔐 JWT-based authentication for all users.
+- **Cloud Storage:** ☁️ Profile images and files are stored via Cloudinary.
 
 ---
 
