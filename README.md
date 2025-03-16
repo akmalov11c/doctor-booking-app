@@ -1,6 +1,6 @@
 # 🏥 Doctor Booking App
 
-🔗 **Live Preview:** [Click here](https://doctor-booking-app-fcol.onrender.com/)
+🔗 **Live Preview:** [Click here](https://doctor-booking-app-fcol.onrender.com/) <br>
 🔗 **Live Preview of Admin Panel:** [Click here](https://doctor-booking-admin-buqk.onrender.com/)
 
 _A full-stack web application that allows patients to book appointments with doctors, doctors to manage their schedules, and administrators to oversee the system._
