@@ -38,8 +38,11 @@ const Footer = () => {
             >
               <NavLink to="/contact">Contact us</NavLink>
             </li>
-            <li className="cursor-pointer hover:text-black transition-all duration-500">
-              Privacy policy
+            <li
+              onClick={() => scrollTo(0, 0)}
+              className="cursor-pointer hover:text-black transition-all duration-500"
+            >
+              <NavLink to="/privacy-policy">Privacy Policy</NavLink>
             </li>
           </ul>
         </div>

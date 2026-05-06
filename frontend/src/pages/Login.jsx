@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../context/AppContext";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 const Login = () => {
   const { backendUrl, token, setToken } = useContext(AppContext);
   const [state, setState] = useState("Sign Up");
@@ -11,11 +11,16 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
+  const [agreedToPolicy, setAgreedToPolicy] = useState(false);
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
 
     try {
+      if (state === "Sign Up" && !agreedToPolicy) {
+        toast.error("Please agree to the Privacy Policy to create an account.");
+        return;
+      }
       if (state == "Sign Up") {
         const { data } = await axios.post(backendUrl + "/api/user/register", {
           name,
@@ -93,6 +98,26 @@ const Login = () => {
             required
           />
         </div>
+        {state === "Sign Up" && (
+          <label className="flex items-start gap-2 cursor-pointer select-none">
+            <input
+              type="checkbox"
+              checked={agreedToPolicy}
+              onChange={(e) => setAgreedToPolicy(e.target.checked)}
+              className="mt-0.5 accent-primary cursor-pointer"
+            />
+            <span className="text-xs text-gray-500 leading-5">
+              I have read and agree to the{" "}
+              <NavLink
+                to="/privacy-policy"
+                target="_blank"
+                className="text-primary underline underline-offset-2"
+              >
+                Privacy Policy
+              </NavLink>
+            </span>
+          </label>
+        )}
         <button
           type="submit"
           className="bg-primary text-white w-full py-2 rounded-md text-base cursor-pointer"
