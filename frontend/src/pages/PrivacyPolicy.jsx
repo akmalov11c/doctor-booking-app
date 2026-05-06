@@ -48,12 +48,11 @@ const PrivacyPolicy = () => {
       {/* Quick summary cards */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
         {[
-          { icon: "🔒", title: "No selling", desc: "We never sell or rent your data to third parties." },
-          { icon: "✅", title: "Your control", desc: "You can request access, correction, or deletion anytime." },
-          { icon: "🇺🇿", title: "Uzbek law", desc: "Compliant with ZRU-547 Personal Data Law." },
+          { title: "No selling", desc: "We never sell or rent your data to third parties." },
+          { title: "Your control", desc: "You can request access, correction, or deletion anytime." },
+          { title: "Uzbek law", desc: "Compliant with ZRU-547 Personal Data Law." },
         ].map((c) => (
           <div key={c.title} className="bg-blue-50 rounded-2xl p-5 border border-blue-100 text-center">
-            <div className="text-3xl mb-2">{c.icon}</div>
             <p className="font-semibold text-gray-800 text-sm mb-1">{c.title}</p>
             <p className="text-gray-500 text-xs leading-5">{c.desc}</p>
           </div>
